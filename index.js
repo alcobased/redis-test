@@ -5,7 +5,7 @@ const redisClient = require('./redis')
 const app = express();
 
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.get("/", (req, res) => {
 	res.send('<h1>root</h1>')
